@@ -1,14 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
+import PokemonsList from './PokemonsList'
 
 function App() {
-  return (
-    <>
-      <header className="header">
-        <h1>My Collection</h1>
-      </header>
-      <section className="main">{/* add your code here */}</section>
-    </>
-  )
+  return <PokemonsList />
 }
 
 export default App
