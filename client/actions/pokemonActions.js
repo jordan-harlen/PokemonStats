@@ -9,9 +9,9 @@ export function receiveAllPokemon(pokemon) {
   }
 }
 
-export function getAllPokemonThunk() {
+export function getAllPokemonThunk(pokemon) {
   return (dispatch) => {
-    getAllPokemonApi()
+    getAllPokemonApi(pokemon)
       .then((res) => {
         dispatch(receiveAllPokemon(res))
       })

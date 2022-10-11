@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import PokemonsList from './PokemonsList'
+import PokemonSearch from './PokemonSearch'
 
 function App() {
-  return <PokemonsList />
+  return <PokemonSearch />
 }
 
 export default App

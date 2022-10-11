@@ -1,8 +1,8 @@
 import request from 'superagent'
 
-export function getAllPokemonApi() {
+export function getAllPokemonApi(pokemon) {
   return request
-    .get('https://pokeapi.co/api/v2/pokemon/ditto')
+    .get(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
     .then((response) => {
       return response.body
     })
