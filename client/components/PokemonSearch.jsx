@@ -32,6 +32,9 @@ const PokemonSearch = () => {
       hp: allPokemon?.stats ? allPokemon?.stats[0].base_stat : '',
       atk: allPokemon?.stats ? allPokemon?.stats[1].base_stat : '',
       def: allPokemon?.stats ? allPokemon?.stats[2].base_stat : '',
+      spcAtk: allPokemon?.stats ? allPokemon?.stats[3].base_stat : '',
+      spcDef: allPokemon?.stats ? allPokemon?.stats[4].base_stat : '',
+      spd: allPokemon?.stats ? allPokemon?.stats[5].base_stat : '',
     }
     setPokemon(searchedPokemon)
   }, [allPokemon])
@@ -86,7 +89,7 @@ const PokemonSearch = () => {
 
       {pokemonChosen && (
         <div className="Pokemon">
-          <h3>{pokemon?.name}</h3>
+          <h2>{pokemon?.name}</h2>
           <img src={pokemon?.img} alt={pokemon?.name} />
           {!pokemon.type2 ? (
             <h3>Type: {pokemon.type1}</h3>
@@ -98,6 +101,9 @@ const PokemonSearch = () => {
           <h3>HP: {pokemon?.hp}</h3>
           <h3>ATK: {pokemon?.atk}</h3>
           <h3>DEF: {pokemon?.def}</h3>
+          <h3>SPC-ATK: {pokemon?.spcAtk}</h3>
+          <h3>SPC-DEF: {pokemon?.spcDef}</h3>
+          <h3>SPD: {pokemon?.spd}</h3>
         </div>
       )}
     </>
