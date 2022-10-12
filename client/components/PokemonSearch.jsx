@@ -21,6 +21,14 @@ const PokemonSearch = () => {
       name: pokemonName.charAt(0).toUpperCase() + pokemonName.slice(1),
       species: allPokemon?.species?.name,
       img: allPokemon?.sprites?.front_default,
+      type1: allPokemon?.types
+        ? allPokemon?.types[0]?.type?.name.charAt(0).toUpperCase() +
+          allPokemon?.types[0]?.type?.name.slice(1)
+        : '',
+      type2: allPokemon?.types
+        ? allPokemon?.types[1]?.type?.name.charAt(0).toUpperCase() +
+          allPokemon?.types[1]?.type?.name.slice(1)
+        : '',
       hp: allPokemon?.stats ? allPokemon?.stats[0].base_stat : '',
       atk: allPokemon?.stats ? allPokemon?.stats[1].base_stat : '',
       def: allPokemon?.stats ? allPokemon?.stats[2].base_stat : '',
@@ -65,22 +73,33 @@ const PokemonSearch = () => {
           </button>
         </div>
       </div>
-      <div className="Pokemon">
-        {!pokemonChosen ? (
-          <h2>Please choose a Pokemon</h2>
-        ) : (
-          <>
-            <h2>Choose another Pokemon!</h2>
-            <img src={pokemon?.img} alt={pokemon?.name} />
-            <h2>{pokemon?.name}</h2>
-            <ul>
-              <li>HP: {pokemon?.hp}</li>
-              <li>ATK: {pokemon?.atk}</li>
-              <li>DEF: {pokemon?.def}</li>
-            </ul>
-          </>
-        )}
-      </div>
+
+      {!pokemonChosen ? (
+        <div className="ChosenStatus">
+          <h1>Please choose a Pokemon!</h1>
+        </div>
+      ) : (
+        <div className="ChosenStatus">
+          <h1>Choose another Pokemon!</h1>
+        </div>
+      )}
+
+      {pokemonChosen && (
+        <div className="Pokemon">
+          <h3>{pokemon?.name}</h3>
+          <img src={pokemon?.img} alt={pokemon?.name} />
+          {!pokemon.type2 ? (
+            <h3>Type: {pokemon.type1}</h3>
+          ) : (
+            <h3>
+              Types: {pokemon.type1}, {pokemon.type2}
+            </h3>
+          )}
+          <h3>HP: {pokemon?.hp}</h3>
+          <h3>ATK: {pokemon?.atk}</h3>
+          <h3>DEF: {pokemon?.def}</h3>
+        </div>
+      )}
     </>
   )
 }
