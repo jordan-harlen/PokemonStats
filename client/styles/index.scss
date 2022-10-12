@@ -23,7 +23,7 @@ body {
     width: 200px;
     height: 40px;
     border-radius: 10px;
-    border: 1px solid rgb(232, 232, 15);
+    border: 1px solid black;
     font-size: 18px;
     padding-left: 10px;
    }
@@ -61,11 +61,15 @@ body {
   border: 1px solid shadow;
 
   h3 {
-    font-weight: bold;
-    margin: 0;
+    margin: 2.5px;
   }
 
   img {
     width: 20%;
   }
+}
+
+.ImgChanger {
+  display: flex;
+  justify-content: center;
 }

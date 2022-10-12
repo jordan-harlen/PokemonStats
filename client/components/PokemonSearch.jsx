@@ -20,7 +20,8 @@ const PokemonSearch = () => {
     const searchedPokemon = {
       name: pokemonName.charAt(0).toUpperCase() + pokemonName.slice(1),
       species: allPokemon?.species?.name,
-      img: allPokemon?.sprites?.front_default,
+      normalImg: allPokemon?.sprites?.front_default,
+      shinyImg: allPokemon?.sprites?.front_shiny,
       type1: allPokemon?.types
         ? allPokemon?.types[0]?.type?.name.charAt(0).toUpperCase() +
           allPokemon?.types[0]?.type?.name.slice(1)
@@ -49,6 +50,16 @@ const PokemonSearch = () => {
     dispatch(getAllPokemonThunk(pokemonName))
     setPokemonChosen(true)
     document.getElementById('search').value = ''
+  }
+
+  const sprite = document.getElementById('pokemonSprite')
+
+  function normalSprite() {
+    sprite.src = pokemon?.normalImg
+  }
+
+  function shinySprite() {
+    sprite.src = pokemon?.shinyImg
   }
 
   return (
@@ -90,7 +101,29 @@ const PokemonSearch = () => {
       {pokemonChosen && (
         <div className="Pokemon">
           <h2>{pokemon?.name}</h2>
-          <img src={pokemon?.img} alt={pokemon?.name} />
+          <img
+            id="pokemonSprite"
+            src={pokemon?.normalImg}
+            alt={pokemon?.name}
+          />
+
+          <div className="ImgChanger">
+            <button
+              onClick={() => {
+                normalSprite()
+              }}
+            >
+              Normal
+            </button>
+            <button
+              onClick={() => {
+                shinySprite()
+              }}
+            >
+              Shiny
+            </button>
+          </div>
+
           {!pokemon.type2 ? (
             <h3>Type: {pokemon.type1}</h3>
           ) : (
