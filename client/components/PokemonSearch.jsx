@@ -67,7 +67,7 @@ const PokemonSearch = () => {
       <div className="PokemonList">
         <div className="TitleSection">
           <img
-            src="https://fontmeme.com/permalink/221012/807552d58592f4c4b9f6fa4b43fd08d7.png"
+            src="https://fontmeme.com/permalink/221012/6e9eb3d96049d4a9be687b9aba6112a5.png"
             alt="title logo"
           />
           <input
@@ -108,20 +108,8 @@ const PokemonSearch = () => {
           />
 
           <div className="ImgChanger">
-            <button
-              onClick={() => {
-                normalSprite()
-              }}
-            >
-              Normal
-            </button>
-            <button
-              onClick={() => {
-                shinySprite()
-              }}
-            >
-              Shiny
-            </button>
+            <button onClick={normalSprite}>Normal</button>
+            <button onClick={shinySprite}>Shiny</button>
           </div>
 
           {!pokemon.type2 ? (
@@ -131,12 +119,12 @@ const PokemonSearch = () => {
               Types: {pokemon.type1}, {pokemon.type2}
             </h3>
           )}
-          <h3>HP: {pokemon?.hp}</h3>
-          <h3>ATK: {pokemon?.atk}</h3>
-          <h3>DEF: {pokemon?.def}</h3>
-          <h3>SPC-ATK: {pokemon?.spcAtk}</h3>
-          <h3>SPC-DEF: {pokemon?.spcDef}</h3>
-          <h3>SPD: {pokemon?.spd}</h3>
+          <h3 className="hp">HP: {pokemon?.hp}</h3>
+          <h3 className="atk">ATK: {pokemon?.atk}</h3>
+          <h3 className="def">DEF: {pokemon?.def}</h3>
+          <h3 className="sAtk">S-ATK: {pokemon?.spcAtk}</h3>
+          <h3 className="sDef">S-DEF: {pokemon?.spcDef}</h3>
+          <h3 className="spd">SPD: {pokemon?.spd}</h3>
         </div>
       )}
     </>

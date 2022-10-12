@@ -8,6 +8,7 @@ body {
   justify-content: center;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 25px;
+  height: 100%;
 }
 
 .TitleSection {
@@ -29,7 +30,7 @@ body {
    }
 
    img {
-    margin: 0, 0, 10px, 0;
+    margin-bottom: 10px;
    }
 
    button {
@@ -59,6 +60,49 @@ body {
   flex-direction: column;
   align-items: center;
   border: 1px solid shadow;
+  margin-bottom: 15px;
+
+  .hp {
+    background-color: red;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 2.5px;
+  }
+
+  .atk {
+    background-color:#EE7F30;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 2.5px;
+  }
+
+  .def {
+    background-color: #F7D02Aed;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 2.5px;
+  }
+
+  .sAtk {
+    background-color: #678FEE;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 2.5px;
+  }
+
+  .sDef {
+    background-color: #77C850;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 2.5px;
+  }
+
+  .spd {
+    background-color: #F85687;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 2.5px;
+  }
 
   h3 {
     margin: 2.5px;
@@ -72,4 +116,17 @@ body {
 .ImgChanger {
   display: flex;
   justify-content: center;
+  margin-bottom: 10px;
 }
+
+.footer {
+  background-color: red;
+  color: yellow;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+}
+
