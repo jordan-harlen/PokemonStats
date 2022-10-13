@@ -70,21 +70,27 @@ const PokemonSearch = () => {
             src="https://fontmeme.com/permalink/221012/6e9eb3d96049d4a9be687b9aba6112a5.png"
             alt="title logo"
           />
-          <input
-            id="search"
-            type="text"
-            onChange={(e) => {
-              handleChange(e)
-            }}
-          />
-          <button
-            type="submit"
-            onClick={(e) => {
+          <form
+            onSubmit={(e) => {
               handleSubmit(e)
             }}
           >
-            Search Pokemon
-          </button>
+            <input
+              id="search"
+              type="text"
+              onChange={(e) => {
+                handleChange(e)
+              }}
+            />
+            <button
+              type="submit"
+              onClick={(e) => {
+                handleSubmit(e)
+              }}
+            >
+              Search Pokemon
+            </button>
+          </form>
         </div>
       </div>
 
