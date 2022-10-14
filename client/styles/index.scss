@@ -1,6 +1,12 @@
 body {
-  margin: 0%;
-  padding: 0%;
+  margin: 0;
+  display: grid;
+  grid-template-areas: 
+      "header"
+      "content"
+      "footer";
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
 }
 
 .PokemonList {
@@ -49,6 +55,12 @@ body {
    }
 }
 
+.viewArea {
+  background-image: url("../../server/public/images/VeridianForrest.jpg");
+  background-size: 100%;
+  
+}
+
 .ChosenStatus {
   display: flex;
   flex-direction: column;
@@ -62,46 +74,225 @@ body {
   border: 1px solid shadow;
   margin-bottom: 15px;
 
+  .types {
+    display: flex;
+    justify-content: center;
+  }
+
+  .Normal {
+    background-color: #a8a979;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    width: 70px;
+    text-align: center;
+  }
+
+  .Fire {
+    background-color: #f18130;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    width: 70px;
+    text-align: center;
+  }
+
+  .Water {
+    background-color: #6891f1;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    width: 70px;
+    text-align: center;
+  }
+
+  .Grass {
+    background-color: #79c851;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    width: 70px;
+    text-align: center;
+  }
+
+  .Electric {
+    background-color: #f9d031;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    width: 70px;
+    text-align: center;
+  }
+
+  .Ice {
+    background-color: #99d9d8;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    width: 70px;
+    text-align: center;
+  }
+
+  .Fighting {
+    background-color: #c03129;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    width: 70px;
+    text-align: center;
+  }
+
+  .Poison {
+    background-color: #a040a0;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    width: 70px;
+    text-align: center;
+  }
+
+  .Ground {
+    background-color: #e0c068;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    width: 70px;
+    text-align: center;
+  }
+
+  .Flying {
+    background-color: #a890f0;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    width: 70px;
+    text-align: center;
+  }
+
+  .Psychic {
+    background-color: #f95889;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    width: 70px;
+    text-align: center;
+  }
+
+  .Bug {
+    background-color: #a9b821;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    width: 70px;
+    text-align: center;
+  }
+
+  .Rock {
+    background-color: #b9a039;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    width: 70px;
+    text-align: center;
+  }
+
+  .Ghost {
+    background-color: #705999;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    width: 70px;
+    text-align: center;
+  }
+
+  .Dark {
+    background-color: #715849;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    width: 70px;
+    text-align: center;
+  }
+
+  .Dragon {
+    background-color: #7038f8;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    width: 70px;
+    text-align: center;
+  }
+
+  .Steel {
+    background-color: #b8b9d1;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    width: 70px;
+    text-align: center;
+  }
+
+  .Fairy {
+    background-color: #f1b7bc;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    width: 70px;
+    text-align: center;
+  }
+
   .hp {
     background-color: red;
-    border: 1px solid black;
+    color: white;
     border-radius: 5px;
     padding: 2.5px;
+    width: 100px;
+    text-align: center;
   }
 
   .atk {
     background-color:#EE7F30;
-    border: 1px solid black;
+    color: white;
     border-radius: 5px;
     padding: 2.5px;
+    width: 100px;
+    text-align: center;
   }
 
   .def {
     background-color: #F7D02Aed;
-    border: 1px solid black;
+    color: white;
     border-radius: 5px;
     padding: 2.5px;
+    width: 100px;
+    text-align: center;
   }
 
   .sAtk {
     background-color: #678FEE;
-    border: 1px solid black;
+    color: white;
     border-radius: 5px;
     padding: 2.5px;
+    width: 100px;
+    text-align: center;
   }
 
   .sDef {
     background-color: #77C850;
-    border: 1px solid black;
+    color: white;
     border-radius: 5px;
     padding: 2.5px;
+    width: 100px;
+    text-align: center;
   }
 
   .spd {
     background-color: #F85687;
-    border: 1px solid black;
+    color: white;
     border-radius: 5px;
     padding: 2.5px;
+    width: 100px;
+    text-align: center;
   }
 
   h3 {
@@ -117,6 +308,10 @@ body {
   display: flex;
   justify-content: center;
   margin-bottom: 10px;
+
+  & button {
+    margin: 3px;
+  }
 }
 
 .footer {
@@ -125,10 +320,17 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  // position: relative;
-  bottom: 0;
   width: 100%;
   max-height: 25vh;
-  margin-top: 50vh;
+  // margin-top: 50vh;
+
+  & img {
+    width: 50%;
+    margin-left: 25%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 

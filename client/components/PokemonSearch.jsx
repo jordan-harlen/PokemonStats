@@ -94,45 +94,50 @@ const PokemonSearch = () => {
         </div>
       </div>
 
-      {!pokemonChosen ? (
-        <div className="ChosenStatus">
-          <h1>Please choose a Pokemon!</h1>
-        </div>
-      ) : (
-        <div className="ChosenStatus">
-          <h1>Choose another Pokemon!</h1>
-        </div>
-      )}
-
-      {pokemonChosen && (
-        <div className="Pokemon">
-          <h2>{pokemon?.name}</h2>
-          <img
-            id="pokemonSprite"
-            src={pokemon?.normalImg}
-            alt={pokemon?.name}
-          />
-
-          <div className="ImgChanger">
-            <button onClick={normalSprite}>Normal</button>
-            <button onClick={shinySprite}>Shiny</button>
+      <div className="viewArea">
+        {!pokemonChosen ? (
+          <div className="ChosenStatus">
+            <h1>Please choose a Pokemon!</h1>
           </div>
+        ) : (
+          <div className="ChosenStatus">
+            <h1>Choose another Pokemon!</h1>
+          </div>
+        )}
 
-          {!pokemon.type2 ? (
-            <h3>Type: {pokemon.type1}</h3>
-          ) : (
-            <h3>
-              Types: {pokemon.type1}, {pokemon.type2}
-            </h3>
-          )}
-          <h3 className="hp">HP: {pokemon?.hp}</h3>
-          <h3 className="atk">ATK: {pokemon?.atk}</h3>
-          <h3 className="def">DEF: {pokemon?.def}</h3>
-          <h3 className="sAtk">S-ATK: {pokemon?.spcAtk}</h3>
-          <h3 className="sDef">S-DEF: {pokemon?.spcDef}</h3>
-          <h3 className="spd">SPD: {pokemon?.spd}</h3>
-        </div>
-      )}
+        {pokemonChosen && (
+          <div className="Pokemon">
+            <h2>{pokemon?.name}</h2>
+            <img
+              id="pokemonSprite"
+              src={pokemon?.normalImg}
+              alt={pokemon?.name}
+            />
+
+            <div className="ImgChanger">
+              <button onClick={normalSprite}>Normal</button>
+              <button onClick={shinySprite}>Shiny</button>
+            </div>
+
+            {!pokemon.type2 ? (
+              <div className="types">
+                <h3 className={pokemon.type1}>{pokemon.type1}</h3>
+              </div>
+            ) : (
+              <div className="types">
+                <h3 className={pokemon.type1}>{pokemon.type1}</h3>
+                <h3 className={pokemon.type2}>{pokemon.type2}</h3>
+              </div>
+            )}
+            <h3 className="hp">HP: {pokemon?.hp}</h3>
+            <h3 className="atk">ATK: {pokemon?.atk}</h3>
+            <h3 className="def">DEF: {pokemon?.def}</h3>
+            <h3 className="sAtk">S-ATK: {pokemon?.spcAtk}</h3>
+            <h3 className="sDef">S-DEF: {pokemon?.spcDef}</h3>
+            <h3 className="spd">SPD: {pokemon?.spd}</h3>
+          </div>
+        )}
+      </div>
     </>
   )
 }
