@@ -1,9 +1,12 @@
 @import './types.scss';
 @import './stats.scss';
+@import './footer.scss';
 
 body {
   max-width: 100%;
-  height: auto;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr;
   margin: 0%;
   padding: 0%;
 }
@@ -13,6 +16,7 @@ body {
   justify-content: center;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 25px;
+  width: 100%;
 }
 
 .TitleSection {
@@ -56,10 +60,21 @@ body {
   }
 }
 
+.filler {
+  width: 100%;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
 .ChosenStatus {
+  background-color: #FFCD00;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
 .Pokemon {
