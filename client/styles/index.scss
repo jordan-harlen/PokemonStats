@@ -1,4 +1,6 @@
 body {
+  max-width: 100%;
+  height: auto;
   margin: 0%;
   padding: 0%;
 }
@@ -19,33 +21,40 @@ body {
   align-items: center;
   color: antiquewhite;
 
-   input {
-    width: 200px;
-    height: 40px;
-    border-radius: 10px;
-    border: 1px solid black;
-    font-size: 18px;
-    padding-left: 10px;
-   }
+  img {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
 
-   img {
-    margin: 0, 0, 10px, 0;
-   }
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
-   button {
-    width: 200px;
-    height: 60px;
-    margin: 20px;
-    border-radius: 10px;
-    border: none;
-    font-size: 18px;
-    padding-left: 10px;
-    background-color: rgb(232, 232, 15);
-   }
+    input {
+      width: 200px;
+      height: 40px;
+      border-radius: 10px;
+      border: 1px solid black;
+      font-size: 18px;
+      padding-left: 37px;
+    }
 
-   button:hover {
-    cursor: pointer;
-   }
+    button {
+      width: 200px;
+      height: 60px;
+      margin: 20px;
+      border-radius: 10px;
+      border: none;
+      font-size: 18px;
+      padding-left: 10px;
+      background-color: rgb(232, 232, 15);
+    }
+
+    button:hover {
+      cursor: pointer;
+    }
+  }
 }
 
 .ChosenStatus {
