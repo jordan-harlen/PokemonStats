@@ -1,3 +1,6 @@
+@import './types.scss';
+@import './stats.scss';
+
 body {
   max-width: 100%;
   height: auto;
@@ -28,8 +31,7 @@ body {
 
   form {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
 
     input {
       width: 200px;
@@ -37,17 +39,14 @@ body {
       border-radius: 10px;
       border: 1px solid black;
       font-size: 18px;
-      padding-left: 37px;
     }
 
     button {
-      width: 200px;
-      height: 60px;
-      margin: 20px;
+      width: 160px;
+      margin-left: 10px;
       border-radius: 10px;
       border: none;
       font-size: 18px;
-      padding-left: 10px;
       background-color: rgb(232, 232, 15);
     }
 
@@ -68,7 +67,8 @@ body {
   flex-direction: column;
   align-items: center;
   border: 1px solid shadow;
-
+  background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/456ea078-26cc-442d-ab88-8f928402bf73/daijxi1-322694e7-9b7b-41e9-8f2c-8faabba6bc38.jpg/v1/fill/w_1600,h_756,q_75,strp/viridian_forest_v2_by_typhart_daijxi1-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzU2IiwicGF0aCI6IlwvZlwvNDU2ZWEwNzgtMjZjYy00NDJkLWFiODgtOGY5Mjg0MDJiZjczXC9kYWlqeGkxLTMyMjY5NGU3LTliN2ItNDFlOS04ZjJjLThmYWFiYmE2YmMzOC5qcGciLCJ3aWR0aCI6Ijw9MTYwMCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.2k2jnXK4s8bhhBS6tDwE262c6DzXbi3ii2nA1Sldo9k');
+  background-size: cover;
   h3 {
     margin: 2.5px;
   }

@@ -62,6 +62,8 @@ const PokemonSearch = () => {
     sprite.src = pokemon?.shinyImg
   }
 
+  console.log(pokemon.type1, pokemon.type2)
+
   return (
     <>
       <div className="PokemonList">
@@ -131,18 +133,21 @@ const PokemonSearch = () => {
           </div>
 
           {!pokemon.type2 ? (
-            <h3>Type: {pokemon.type1}</h3>
+            <div className="types">
+              <h3 className={pokemon.type1}>{pokemon.type1}</h3>
+            </div>
           ) : (
-            <h3>
-              Types: {pokemon.type1}, {pokemon.type2}
-            </h3>
+            <div className="types">
+              <h3 className={pokemon.type1}>{pokemon.type1}</h3>
+              <h3 className={pokemon.type2}>{pokemon.type2}</h3>
+            </div>
           )}
-          <h3>HP: {pokemon?.hp}</h3>
-          <h3>ATK: {pokemon?.atk}</h3>
-          <h3>DEF: {pokemon?.def}</h3>
-          <h3>SPC-ATK: {pokemon?.spcAtk}</h3>
-          <h3>SPC-DEF: {pokemon?.spcDef}</h3>
-          <h3>SPD: {pokemon?.spd}</h3>
+          <h3 className="hp">HP: {pokemon?.hp}</h3>
+          <h3 className="atk">ATK: {pokemon?.atk}</h3>
+          <h3 className="def">DEF: {pokemon?.def}</h3>
+          <h3 className="spc-atk">SPC-ATK: {pokemon?.spcAtk}</h3>
+          <h3 className="spc-def">SPC-DEF: {pokemon?.spcDef}</h3>
+          <h3 className="spd">SPD: {pokemon?.spd}</h3>
         </div>
       )}
     </>
