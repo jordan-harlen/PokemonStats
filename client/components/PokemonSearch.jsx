@@ -42,7 +42,7 @@ const PokemonSearch = () => {
 
   function handleChange(e) {
     e.preventDefault()
-    setPokemonName(e.target.value)
+    setPokemonName(e.target.value.toLowerCase())
   }
 
   function handleSubmit(e) {
