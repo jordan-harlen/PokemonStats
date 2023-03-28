@@ -5,9 +5,7 @@ PokemonStats is a web application built using React, HTML, SCSS, and Javascript.
 https://comforting-biscotti-8054c6.netlify.app
 
 ## Getting Started
-To get started, you will need to have Node.js installed on your computer. Once you have Node.js installed, you can clone the repository to your local machine:
-
-git clone https://github.com/jordan-harlen/PokemonStats.git
+Git clone https://github.com/jordan-harlen/PokemonStats.git
 Next, navigate to the root directory of the project and install the required dependencies:
 
 cd PokemonStats
