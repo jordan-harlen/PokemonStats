@@ -22,4 +22,4 @@ To use PokemonStats, simply type the name of a Pokemon into the search bar and p
 You can also toggle between the normal image and shiny image by clicking on the corresponding buttons.
 
 ## Contributing
-If you would like to contribute to PokemonStats, feel free to open a pull request with your changes. Please ensure that your code follows the existing coding style and passes all tests.
+If you would like to contribute to PokemonStats, feel free to open a pull request with your changes.
